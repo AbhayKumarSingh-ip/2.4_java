@@ -1,0 +1,25 @@
+package controller;
+
+import dao.EmployeeDAO;
+import model.Employee;
+import java.util.List;
+
+public class EmployeeController {
+    private EmployeeDAO dao = new EmployeeDAO();
+
+    public void addEmployee(Employee emp) {
+        dao.insertEmployee(emp);
+    }
+
+    public List<Employee> getAllEmployees() {
+        return dao.getAllEmployees();
+    }
+
+    public void updateEmployee(Employee emp) {
+        dao.updateEmployee(emp);
+    }
+
+    public void deleteEmployee(int id) {
+        dao.deleteEmployee(id);
+    }
+}
